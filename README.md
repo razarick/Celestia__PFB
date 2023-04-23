@@ -1,2 +1,2 @@
-# Celestia__PFB
+# Celestia Pay for Blob Task
 I created this repository to fulfill the task of the bonus task light node from Celestia
