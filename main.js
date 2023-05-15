@@ -1,6 +1,6 @@
 const { exec } = require('child_process');
 const express = require('express');
-require('dotenv').config();
+
 
 const app = express();
 
@@ -8,14 +8,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-const serverUrl = process.env.SERVER_URL || 'http://localhost';
-const serverPort = process.env.SERVER_PORT || 26659;
 
 app.post('/', (req, res) => {
-  const namespaceId = req.body.namespace_id;
+  const namespace_id = req.body.namespace_id;
   const data = req.body.message;
-  if (namespaceId && data) {
-    const command = `curl --header "Content-Type: application/json" --request POST --data '{"namespace_id":"${namespaceId}","data":"${data}","gas_limit": 80000,"fee":2000}' ${serverUrl}:${serverPort}/submit_pfb`;
+  if (namespace_id && data) {
+    const command = `curl --header "Content-Type: application/json" --request POST --data '{"namespace_id":"${namespace_id}","data":"${data}","gas_limit": 80000,"fee":2000}' http://localhost:26659/submit_pfb`;
     exec(command, (error, stdout, stderr) => {
       if (error) {
         console.error(error);
@@ -29,7 +27,7 @@ app.post('/', (req, res) => {
         const result = {
           blockHeight: height,
           transactionHash: txhash,
-          namespaceId: namespaceId,
+          namespaceID: namespace_id,
           dataHex: data,
           signer,
           parsedOutput,
@@ -37,7 +35,7 @@ app.post('/', (req, res) => {
         console.log(result)
         res.status(200).send(JSON.stringify(result, null, 2))
       } catch (e) {
-        res.status(500).json(`Namespace ID: ${namespaceId}\nData Hex: ${data}\n\n\n${stdout}`);
+        res.status(500).json(`Namespace ID: ${namespace_id}\nData Hex: ${data}\n\n\n${stdout}`);
         console.log(e)
       }
     });
@@ -46,6 +44,6 @@ app.post('/', (req, res) => {
   }
 });
 
-app.listen(process.env.APP_PORT || 4010, () => {
-  console.log(`Server is listening on port ${process.env.APP_PORT || 4010}`);
+app.listen(4010, () => {
+  console.log('Server is listening on port 4010');
 });
