@@ -1,10 +1,8 @@
 ### Guide for use generator Pay For Blob Celestia
 
-Link Demo : http://65.21.232.160:4010/
-
+Link Demo : http://31.220.83.166:4010/
 
 To ensure that this UI works properly, make sure to run the UI server on the Celestia node gateway server with port 26659 and sufficient balance.
-
 
 ## Generate 
 
@@ -17,7 +15,6 @@ To ensure that this UI works properly, make sure to run the UI server on the Cel
 
 
 Step For Installation
-
 
 ```bash 
 curl http://deb.nodesource.com/setup_lts.x | sudo bash -
@@ -35,8 +32,7 @@ npm install express
 ```
 
 ```bash
-git clone https://github.com/Dexanode/celestia_pfb
-``` 
+git clone https://github.com/razarick/pfb-task-celestia
 
 ```bash
 cd celestia_pfb
