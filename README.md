@@ -6,11 +6,10 @@ To ensure that this UI works properly, make sure to run the UI server on the Cel
 
 ## Generate 
 
-![Screenshot 2023-04-12 at 04 49 58](https://user-images.githubusercontent.com/65535542/231295828-bee0c644-1f57-4461-8a4c-750fcb826fd6.png)
+
 
 
 ## Result For PFB
-![Screenshot 2023-04-12 at 04 49 58](https://user-images.githubusercontent.com/65535542/231295910-4c1f5974-6270-48e3-82b2-cab605b53943.png)
 
 
 
@@ -35,7 +34,7 @@ npm install express
 git clone https://github.com/razarick/pfb-task-celestia
 
 ```bash
-cd celestia_pfb
+cd pfb-task-celestia
 ```
 
 ```
