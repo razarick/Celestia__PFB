@@ -1,28 +1,27 @@
 /* Font family */
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 
 /* Body styles */
 body {
-  font-family: 'Poppins';
-  color: purple;
-  background-color: #f2e6ff;
-  display: grid;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: #1c2331;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
 
 a {
   text-decoration: none;
-  color: #f2e6ff;
+  color: #3ea3fc;
 }
 
 h3 {
   display: flex;
-  font-family: 'Poppins';
-  color: #7a2bf9;
+  font-family: 'Roboto', sans-serif;
+  color: #3ea3fc;
   margin-bottom: 50px;
   align-items: center;
   justify-content: center;
@@ -31,9 +30,8 @@ h3 {
 
 h1 {
   display: flex;
-  font-family: 'Poppins';
-  color: #f2e6ff;
- 
+  font-family: 'Roboto', sans-serif;
+  color: white;
 }
 
 /* Form styles */
@@ -44,33 +42,32 @@ form {
   width: 100%;
   max-width: 600px;
   padding: 40px;
-  background-color: #7a2bf9;
+  background-color: #222;
   border-radius: 10px;
-  box-shadow: 0 10px 20px black;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-form input, button {
+form input,
+button {
   width: 100%;
   max-width: 130px;
-  padding: 15px;
+  padding: 10px;
   margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
-  background-color: #f2e6ff;
-  color: #7a2bf9;
-  font-size: 18px;
+  background-color: #3ea3fc;
+  color: white;
+  font-size: 14px;
   font-weight: 500;
-  box-shadow: 0 5px 10px #7a2bf9;
+  box-shadow: 0 5px 10px rgba(62, 163, 252, 0.2);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 form input {
   max-width: 500px;
-  color: #7a2bf9;
+  color: white;
 }
-
-
 
 /* Result styles */
 .success {
@@ -81,12 +78,6 @@ form input {
   color: #ff0000;
 }
 
-#result h2 {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
 #result {
   margin-top: 50px;
   display: flex;
@@ -94,8 +85,15 @@ form input {
   align-items: center;
   width: 100%;
   max-width: 800px;
+  float: left;
 }
 
+#result h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+}
 
 #result pre {
   width: 100%;
@@ -105,70 +103,12 @@ form input {
   background-color: rgba(255, 255, 255, 0.1);
   font-size: 18px;
   font-weight: 500;
-  box-shadow: 0 10px 20px black;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
 }
-
 
 form input:focus {
   outline: none;
   background-color: #101010;
-  box-shadow: 0 10px 20px black;
-}
-
-
-
-body {
-  font-family: Helvetica;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-}
-.site-header { 
-  border-bottom: 1px solid #ccc;
-  padding: .5em 1em;
-  margin-left: -270px;
-  margin-right: -270px;
-  background-color: #7a2bf9;
-
-}
-
-.site-header::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.site-identity {
-  float: left;
-}
-
-.site-identity h1 {
-  font-size: 1.5em;
-  margin: .7em 0 .3em 0;
-  display: inline-block;
-  color: #f2e6ff;
-}
-
-.site-identity img {
-  max-width: 55px;
-  float: left;
-  margin: 0 10px 0 0;
-}
-
-.site-navigation {
-  float: right;
-}
-
-.site-navigation ul, li {
-  margin: 0; 
-  padding: 0;
-}
-
-.site-navigation li {
-  display: inline-block;
-  margin: 1.4em 1em 1em 1em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
