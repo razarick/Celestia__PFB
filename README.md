@@ -34,8 +34,7 @@ npm install express
 git clone https://github.com/razarick/pfb-task-celestia
 
 ```bash
-cd pfb-task-celestia
-```
+cd pfb-task-celestia```
 
 ```
 node main.js
